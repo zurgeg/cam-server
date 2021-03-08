@@ -10,5 +10,5 @@ class Orders(db.Model):
     email = db.Column(db.String(127))
     order_schema = db.Column(db.UnicodeText())
     filepath = db.Column(db.String())
-    wiilink24_id = db.column(db.Integer())
+    wiilink24_id = db.Column(db.Integer())
     
