@@ -9,11 +9,6 @@ class Orders(db.Model):
     complete = db.Column(db.Boolean, default=False, nullable=False)
     email = db.Column(db.String(127))
     order_schema = db.Column(db.UnicodeText())
-
-
-class Images(db.Model):
-    image_id = db.Column(db.String(7), nullable=False, primary_key=True)
-    order_id = db.Column(
-        db.String(14), db.ForeignKey("orders.order_id"), nullable=False
-    )
-    filename = db.Column(db.String, nullable=False)
+    filepath = db.Column(db.String())
+    wiilink24_id = db.column(db.Integer())
+    
